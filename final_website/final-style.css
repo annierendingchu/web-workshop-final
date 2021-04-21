@@ -1,0 +1,419 @@
+*{
+    cursor:none;
+}
+
+
+body {
+    background-color: rgb(245, 146, 203);
+    background-image: url("background-cave.JPG");
+    background-repeat: repeat-x;
+    background-position: center top;
+    overflow-y: hidden;
+    position:static;
+}
+.background {
+    height: 100%;
+    width: 100%;
+    width:1000vw;
+}
+
+audio {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+.grass1 {
+    z-index: 50;
+    width: calc(100vw / 6);
+    height: 200px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:-50px; */
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass1:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass2 {
+    z-index: 51;
+    width: calc(100vw / 6);
+    height: 200px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:210px; */
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass2:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass3 {
+    z-index: 52;
+    width: calc(100vw / 6);
+    height: 200px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:470px; */
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass3:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass4 {
+    z-index: 53;
+    width: calc(100vw / 6);
+    height: 200px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:730px; */
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass4:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass5 {
+    z-index: 54;
+    width: calc(100vw / 6);
+    height: 200px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:990px; */
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass5:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass6 {
+    z-index: 55;
+    width: calc(100vw / 6);
+    height: 200px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:1250px; */
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass6:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass7 {
+    z-index: 55;
+    width: calc(100vw / 6);
+    height: 200px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    left:1510px;
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass7:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grasses {
+    z-index: 55;
+    display:flex;
+    align-items: flex-end;
+    position:fixed;
+    bottom:0;
+}
+
+/* failed version for the grass */
+/* .grass {
+    display:inline-block;
+    bottom: 0;
+    z-index: 31;
+    position:fixed;
+    white-space: nowrap;
+    
+}
+
+img.short-grass {
+    width: 300px;
+    height: 200px;
+}
+img.short-grass:hover{
+    background-image: url(tall-grass.GIF);
+} */
+
+.bcgd2 {
+    z-index: -5;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: url("foreground.PNG");
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-size:cover;
+    top:0px;
+    bottom: 0px;
+    overflow:auto;
+}
+
+
+h3 {
+    z-index: 57;
+    margin: 10px; 
+    width:200px;
+    height:60px;
+    display: inline-block;
+    position:fixed;
+    right:0;
+    background-image: url(bug.png);
+    background-size: cover;
+    animation: carrot-move 1s linear alternate infinite;
+    font-family: 'Press Start 2P', cursive;
+    font-size:2em
+
+}
+
+h3:hover{
+    background-image: url(bug-fast.gif);
+    animation-play-state: paused;
+}
+
+.grave{
+    display: inline-block;
+    position:absolute;
+    left:922vw;
+    bottom:0;
+}
+
+.grave img{
+    width: 600px;
+    height:600px;
+}
+
+.bubble{
+    display: flexbox;
+    position:absolute;
+    left:922vw;
+    bottom:0;
+}
+
+.bubble img{
+    width:600px;
+    height:600px;
+}
+
+.speech {
+    opacity: 0;
+}
+
+.speech:hover{
+    opacity:1;
+}
+
+a{
+    background-color:rgba(255, 410, 0, 0.5);
+}
+
+@keyframes carrot-move {
+    0% {
+        transform: translate(50vh);
+    }
+
+    100%{
+        transform:translate(0vh);
+    }
+}
+
+.cursor {
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.cursor.hide {
+    opacity: 0;
+}
+
+.cursor img{
+    z-index: 1001;
+    width:100%;
+}
+
+.bite{
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.bite img{
+    z-index: 1001;
+    width:100%;
+}
+
+.bite.showing {
+    opacity: 1;
+}
+
+
+/* a {
+    text-align: center;    
+    overflow: auto;
+    position: absolute;
+    right: 100px;
+} */
+
+/* img.bunny-angry {
+    width: 250px;
+    height: 250px;
+    position: fixed;
+
+}
+
+img.bunny-angry:hover {
+    background-image: url(hungry.GIF);
+    width: 250px;
+    height: 250px;
+} */
+
+.bunny {
+    z-index: 56;
+    width: 250px;
+    height: 250px;
+    animation: bunny-move 5s linear infinite;
+    position: fixed;
+    display:inline-block;
+    background-image: url(angry.GIF);
+    background-size: cover;
+
+}
+
+
+@keyframes bunny-move{
+    0% {
+        transform: translate(-25vw, -50vh);
+    }
+    20% {
+
+        transform: translate(0vw, 50vh);
+    }
+    40% {
+
+        transform: translate(25vw, -25vh);
+    }
+    60% {
+
+        transform: translate(50vw, 25vh);
+    }
+    80% {
+
+        transform: translate(75vw, -50vh);
+    }
+    100% {
+        transform: translate(105vw, 50vh);
+    }
+
+}
+
+/* @keyframes bunny-move{
+    0% {
+        background-image: url(angry.GIF);
+        transform: translate(-25vw, -50vh);
+    }
+    10% {
+        background-image: url(angry.GIF);
+
+        transform: translate(0vw, 50vh);
+    }
+    20% {
+        background-image: url(angry.GIF);
+
+        transform: translate(25vw, -25vh);
+    }
+    30% {
+        background-image: url(angry.GIF);
+
+        transform: translate(50vw, 25vh);
+    }
+    40% {
+        background-image: url(angry.GIF);
+
+        transform: translate(75vw, -50vh);
+    }
+    50% {
+        background-image: url(angry.GIF);
+        transform: translate(105vw, 50vh);
+    }
+    50.1% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(105vw, 50vh);
+    }
+    60% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(75vw,-50vh);
+    }
+    70% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(50vw, 25vh);
+    }
+    80% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(25vw, -25vh);
+    }
+    90% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(0vw, 50vh);
+    }
+    100% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(-25vw, -50vh);
+    }
+} */
+.bunny.happy {
+    background-image:url(happy.GIF);
+}
+
+.bunny:hover {
+    animation-play-state: paused;
+    background-image: url(hungry.GIF);
+    position: fixed;
+    background-size: cover;
+
+}
+
+.bunny.happy:hover {
+    background-image:url(happy.GIF);
+}
+
